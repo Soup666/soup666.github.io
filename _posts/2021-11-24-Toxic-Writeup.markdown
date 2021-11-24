@@ -47,7 +47,7 @@ And behold... It works!
 ![Alt text](/_img/toxic-01.png)
 
 Now, let's exploit it to find the flag. Looking at the code again we can see the name of the flag will be random every time. So we'll have to find a way to execute commands on the server to list the directory
-![Alt text](_img/toxic-02.png)
+![Alt text](http://github.com/soup666/soup66.github.io/_img/toxic-02.png)
 
 Googling how to escalate LFI to RCE gave me this article: https://outpost24.com/blog/from-local-file-inclusion-to-remote-code-execution-part-1. This gave me a POC to execute <?php phpinfo(); ?> then see the result in the server logs. We can see in the source code that the server uses nginx, so the log file will be located at /var/log/nginx/access.log
 We can send the command by including it in a header on our GET request. For some reason, including it in the GET header crashed the website. So I'm gonna use User-Agent since it's printed in the log. Crafting the request looked like this:
