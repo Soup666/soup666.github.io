@@ -44,16 +44,16 @@ We have control over the file displayed here. Lets change the cookie to try and 
 (P.s Don't forget to change the size!)
 
 And behold... It works!
-![Alt text](/_img/toxic-01.png)
+![Passwd file](https://user-images.githubusercontent.com/38260830/143324638-11c9ba0a-3ebb-4f61-be4f-880e87a56875.png)
 
 Now, let's exploit it to find the flag. Looking at the code again we can see the name of the flag will be random every time. So we'll have to find a way to execute commands on the server to list the directory
-![Alt text](http://github.com/soup666/soup66.github.io/_img/toxic-02.png)
+![Flag name code](https://user-images.githubusercontent.com/38260830/143324646-a79b6580-df72-40b1-b66d-b6cab76a3a72.png)
 
 Googling how to escalate LFI to RCE gave me this article: https://outpost24.com/blog/from-local-file-inclusion-to-remote-code-execution-part-1. This gave me a POC to execute <?php phpinfo(); ?> then see the result in the server logs. We can see in the source code that the server uses nginx, so the log file will be located at /var/log/nginx/access.log
 We can send the command by including it in a header on our GET request. For some reason, including it in the GET header crashed the website. So I'm gonna use User-Agent since it's printed in the log. Crafting the request looked like this:
-![Alt text](../_img/toxic-03.png)
+![Payload](https://user-images.githubusercontent.com/38260830/143324647-707e9224-b2a9-49c6-b99e-e492d2dfbea3.png)
 
 Sending the request and viewing the log gives us the name of the flag file!
-![Alt text](../_img/toxic-04.png)
+![Flag name](https://user-images.githubusercontent.com/38260830/143324649-8b4932ba-99ee-4755-8f1c-a27234c66b6b.png)
 
 Bingo! Lets cat the file using the same method and get us the flag :)
