@@ -55,7 +55,7 @@ Now, let's exploit it to find the flag. Looking at the code again we can see the
 
 ![Flag name code](https://user-images.githubusercontent.com/38260830/143324646-a79b6580-df72-40b1-b66d-b6cab76a3a72.png)
 
-Googling how to escalate LFI to RCE gave me this article: https://outpost24.com/blog/from-local-file-inclusion-to-remote-code-execution-part-1. This gave me a POC to execute <?php phpinfo(); ?> then see the result in the server logs. We can see in the source code that the server uses nginx, so the log file will be located at /var/log/nginx/access.log
+Googling how to escalate LFI to RCE gave me this article: [Useful-Article]. This gave me a POC to execute <?php phpinfo(); ?> then see the result in the server logs. We can see in the source code that the server uses nginx, so the log file will be located at /var/log/nginx/access.log
 We can send the command by including it in a header on our GET request. For some reason, including it in the GET header crashed the website. So I'm gonna use User-Agent since it's printed in the log. Crafting the request looked like this:
 
 ![Payload](https://user-images.githubusercontent.com/38260830/143324647-707e9224-b2a9-49c6-b99e-e492d2dfbea3.png)
@@ -65,3 +65,5 @@ Sending the request and viewing the log gives us the name of the flag file!
 ![Flag name](https://user-images.githubusercontent.com/38260830/143324649-8b4932ba-99ee-4755-8f1c-a27234c66b6b.png)
 
 Bingo! Let's cat the file using the same method and get us the flag :)
+
+[Useful-Article]: https://outpost24.com/blog/from-local-file-inclusion-to-remote-code-execution-part-1
