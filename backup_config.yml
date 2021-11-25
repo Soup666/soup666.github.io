@@ -27,26 +27,11 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: Die_Slime
 github_username:  Soup666
 
-
-avatar: "/assets/img/avatar-icon.png"
-round-avatar: true
-
 # Build settings
 #theme: minima
 remote_theme: daattali/beautiful-jekyll@5.0.0
 plugins:
   - jekyll-feed
-
-social-network-links:
-  email: "laister.sam@gmail.com"
-  github: Soup666
-  twitter: Die_Slime
-
-share-links-active:
-  twitter: true
-  github: true
-
-post_search: true
 
 navbar-col: "#EAEAEA"
 navbar-text-col: "#404040"
