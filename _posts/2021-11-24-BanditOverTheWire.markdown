@@ -1,4 +1,9 @@
-# Writeups for bandit0
+---
+layout: post
+title:  "OverTheWire"
+date:   2021-11-24 22:22:42 +0000
+categories: Writeups
+---
 
 # level 0
 
