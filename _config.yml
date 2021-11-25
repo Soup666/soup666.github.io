@@ -28,7 +28,8 @@ twitter_username: Die_Slime
 github_username:  Soup666
 
 # Build settings
-theme: minima
+#theme: minima
+remote_theme: daattali/beautiful-jekyll@5.0.0
 plugins:
   - jekyll-feed
 
