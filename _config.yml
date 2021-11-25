@@ -24,7 +24,7 @@ author: Soup
 email: laister.sam@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Starting with HackTheBox, I will be blogging all the challenges i do!
-baseurl: "/blog" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: Die_Slime
 github_username:  Soup666
