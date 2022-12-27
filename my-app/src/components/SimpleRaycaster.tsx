@@ -312,6 +312,7 @@ const SimpleRaycasterComponent: React.FC<ComponentProps> = (
 
   const draw = (p5: p5Types) => {
 	p5.background(220);
+	p5.fill(20,0,0);
 	p5.rect(
 	  WINDOW_WIDTH,
 	  WINDOW_HEIGHT / 2,
@@ -322,15 +323,28 @@ const SimpleRaycasterComponent: React.FC<ComponentProps> = (
 	p5.rect(WINDOW_WIDTH, 0, WINDOW_WIDTH * 2, WINDOW_HEIGHT / 2);
 	p5.fill(50, 0, 0);
 	p5.rect(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
+
 	p5.strokeWeight(1);
+	
 	drawMap(p5);
 	drawPlayer(p5);
 	drawRays(p5);
+
+	p5.fill(255,255,255);
+	p5.text("X: " + px,25,WINDOW_HEIGHT-100);
+	p5.text("Y: " + py,25,WINDOW_HEIGHT-75);
+	p5.text("Pa: " + pa,25,WINDOW_HEIGHT-50);
+
+	p5.text("Dof: " + DOF,200,WINDOW_HEIGHT-100);
+	p5.text("Raycount: " + RAYCOUNT,200,WINDOW_HEIGHT-75);
+	p5.text("Window Width: " + WINDOW_WIDTH + " (x1, x2)",200,WINDOW_HEIGHT-50);
+	p5.text("Window Height: " + WINDOW_HEIGHT,200,WINDOW_HEIGHT-25);
   };
 
   if (props.showControls) {
 	return (
 	  <div>
+
 		<Sketch setup={setup} draw={draw} />
 
 		<div className="row">
