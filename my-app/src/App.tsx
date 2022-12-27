@@ -1,25 +1,21 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { NavLink, Routes, Route, Router } from 'react-router-dom';
+import NotFound from './pages/NotFound';
+import Home from './pages/Home';
+import Raycaster from './pages/projects/raycaster';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <button className="btn btn-primary">btn</button>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+          <Routes>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/projects/raycaster" element={<Raycaster/>}/>
+            <Route path="*" element={<NotFound/>}/>
+          </Routes>
+
     </div>
   );
 }
