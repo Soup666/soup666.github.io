@@ -7,6 +7,9 @@ function ProjectsList () {
 
     return (
         <div>
+            <h1 className="text-success mt-3">Project List</h1>
+            <Link to={`/`} className="nes-btn is-primary">Back</Link>
+            <hr className="mb-3" />
             {ProjectData.map((project) => {
                 return (
                     <div className="row" key={project.id}>
