@@ -11,27 +11,10 @@ function Home () {
             </div>
         </div>
 
-        <div className="row">
-            <div className="col-4 m-auto mt-3">
 
-                <div className="nes-container is-dark with-title is-centered">
-                    <p className="title">Raycasters <span className="text-success">50%</span></p>
+        <NavLink to="/projects" className="nes-btn is-primary">Projects</NavLink>
 
-                    <div className="row">
-                        <p>First big Uni project! Raycasters.</p>
-                    </div>
-
-                    <div className="row">
-                        <progress className="nes-progress is-success" value="50" max="100"></progress>
-                    </div>
-
-                    <div className="row">
-                        <NavLink to="/projects/raycaster" className="nes-btn is-primary">View</NavLink>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+        
     </div>
   )
 }
