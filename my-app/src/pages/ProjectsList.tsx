@@ -1,7 +1,6 @@
 
 import { NavLink, Routes, Route, Router, Outlet, Link } from 'react-router-dom';
 import {ProjectData} from "../ProjectData";
-import ProjectPage from './ProjectPage';
 
 function ProjectsList () { 
 
@@ -23,7 +22,7 @@ function ProjectsList () {
                                 </div>
 
                                 <div className="row">
-                                    <progress className="nes-progress is-success" value={project.progress} max="100"></progress>
+                                    <progress className={"nes-progress is-" + project.progressColor} value={project.progress} max="100"></progress>
                                 </div>
 
                                 <div className="row">
