@@ -21,7 +21,7 @@ function ProjectPage() {
             </div>
         </div>
         <div className="row mt-3">
-            <div className="col-10">
+            <div className="col-md-10">
                 <Routes>
                     <Route path="/view" element={Component} />
                     <Route path="/about" element={About}/>
@@ -29,7 +29,7 @@ function ProjectPage() {
                 </Routes>
                 <Outlet/>
             </div>
-            <div className="col-2">
+            <div className="col-md-2">
                 <div className="nes-container is-dark with-title is-centered me-3">
                     <p className="title">{project.name} <span className="text-success">{project.description}</span></p>
                     <hr className="mb-3" />

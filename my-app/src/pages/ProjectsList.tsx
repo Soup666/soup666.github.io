@@ -12,7 +12,7 @@ function ProjectsList () {
             {ProjectData.map((project) => {
                 return (
                     <div className="row" key={project.id}>
-                        <div className="col-4 m-auto mt-3">
+                        <div className="col-md-4 m-auto mt-3">
 
                             <div className="nes-container is-dark with-title is-centered">
                                 <p className="title">{project.name} <span className="text-success">{project.description}</span></p>
