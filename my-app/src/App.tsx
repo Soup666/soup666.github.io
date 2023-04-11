@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Raycaster from './pages/projects/raycaster/raycaster';
 import ProjectsList from './pages/ProjectsList';
 import ProjectPage from './pages/ProjectPage';
+import AOC from './pages/AdventOfCode/aoc';
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
             <Route path="/" element={<Home/>}/>
             <Route path="projects" element={<ProjectsList/>} />
             <Route path="projects/:id/*" element={<ProjectPage/>}/>
+            <Route path="advent-of-code-2023" element={<AOC/>}/>
+            <Route path="advent-of-code-2023/:id/*" element={<AOC/>}/>
             <Route path="*" element={<NotFound/>}/>
           </Routes>
 
